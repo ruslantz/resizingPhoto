@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разметка фото занятий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📷 Разметка фото занятий</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="photoInput" class="file-input" accept="image/*" multiple>
+            <button onclick="document.getElementById('photoInput').click()" class="upload-btn">
+                📸 Выбрать фото
+            </button>
+        </div>
+        
+        <div id="taggerSection" class="tagger-section">
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            
+            <div class="photo-container">
+                <div class="photo-column">
+                    <img id="photoPreview" class="photo-preview">
+                </div>
+                <div class="children-column">
+                    <div class="form-group">
+                        <label for="lessonNumber">Номер занятия:</label>
+                        <input type="number" id="lessonNumber" min="1" value="1">
+                    </div>
+                    
+                    <div class="children-section">
+                        <h3>Выберите ребенка:</h3>
+                        <div class="child-buttons" id="childButtons">
+                            <button class="child-btn" data-id="AlievaN77">Николь</button>
+                            <button class="child-btn" data-id="ZhuravlevaE96">Ева</button>
+                            <button class="child-btn" data-id="IvanushkinM09">Марк</button>
+                            <button class="child-btn" data-id="KaisinaK55">Кира</button>
+                            <button class="child-btn" data-id="KapitonovM17">Михаил</button>
+                            <button class="child-btn" data-id="OstapchukA15">Арсений</button>
+                            <button class="child-btn" data-id="SalyakinA30">Алексей</button>
+                            <button class="child-btn" data-id="ShilinM81">Максим</button>
+                            <button class="child-btn" data-id="AnaevB73">Борис</button>
+                            <button class="child-btn" data-id="BaranovD88">Даниил</button>
+                            <button class="child-btn" data-id="DjahayaS42">Сандро</button>
+                            <button class="child-btn" data-id="ZhuravlevaA51">Аврора</button>
+                            <button class="child-btn" data-id="KazaryanA12">Артемий</button>
+                            <button class="child-btn" data-id="KuznetsovA68">Арсений</button>
+                            <button class="child-btn" data-id="PantileykoA24">Артем</button>
+                            <button class="child-btn" data-id="RutskiyY33">Ян</button>
+                            <button class="child-btn" data-id="StepanenkoM65">Мия</button>
+                            <button class="child-btn" data-id="ChzhouS77">Шуянь</button>
+                            <button class="child-btn" data-id="SavinovaE32">Елизавета</button>
+                            <button class="child-btn" data-id="ZicinL25">Лука</button>
+                            <button class="child-btn" data-id="SavinovI64">Илья</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button onclick="skipPhoto()" class="action-btn skip-btn">⏭️ Пропустить фото</button>
+            </div>
+            
+            <div id="status" class="status info"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

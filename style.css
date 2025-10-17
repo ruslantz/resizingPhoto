@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f7;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.upload-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #007AFF;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+}
+
+.tagger-section {
+    display: none;
+}
+
+/* Новая структура - фото слева, дети справа */
+.photo-container {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.photo-column {
+    flex: 0 0 50%;
+}
+
+.children-column {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    background: white;
+}
+
+.photo-preview {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: contain;
+    border: 2px solid #eee;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.skip-btn {
+    background: #FF9500;
+    color: white;
+}
+
+.status {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.success {
+    background: #DDFFE6;
+    color: #007AFF;
+}
+
+.error {
+    background: #FFD1D1;
+    color: #FF3B30;
+}
+
+.info {
+    background: #e8f4fc;
+    color: #0c5460;
+}
+
+/* Убрать file-info */
+.file-info {
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #007AFF;
+    border-radius: 4px;
+    transition: width 0.3s;
+    width: 0%;
+}
+
+/* Дети - маленькие кнопки в несколько столбцов */
+.child-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.child-btn {
+    padding: 8px 10px;
+    border: 2px solid #007AFF;
+    border-radius: 8px;
+    background: white;
+    color: #007AFF;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.child-btn.active {
+    background: #007AFF;
+    color: white;
+}
+
+.children-section {
+    margin-bottom: 15px;
+}
+
+.children-section h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-align: center;
+    font-size: 14px;
+}
