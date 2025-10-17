@@ -98,25 +98,49 @@ h1 {
     border: 2px solid #eee;
 }
 
+.photo-counter {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #666;
+}
+
 .action-buttons {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 .action-btn {
-    flex: 1;
-    padding: 12px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 600;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.save-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.next-btn {
+    background: #2196F3;
+    color: white;
 }
 
 .skip-btn {
-    background: #FF9500;
+    background: #ff9800;
     color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
 }
 
 .status {
@@ -200,4 +224,43 @@ h1 {
     color: #2c3e50;
     text-align: center;
     font-size: 14px;
+}
+
+/* Стили для выбора базы данных */
+.database-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.database-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.db-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.db-btn {
+    padding: 12px 20px;
+    border: 2px solid #007AFF;
+    background: white;
+    color: #007AFF;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.db-btn.active {
+    background: #007AFF;
+    color: white;
+}
+
+.db-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,122,255,0.3);
 }
